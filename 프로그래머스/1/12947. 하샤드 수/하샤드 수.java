@@ -6,8 +6,7 @@ class Solution {
         int sum = 0;
         
         for (int i = 0; i < list.length; i++){
-            list[i] = Integer.parseInt(input.charAt(i)+"");
-            sum += list[i];
+            sum += Integer.parseInt(input.charAt(i)+"");
         }
         
         if (x % sum == 0){
