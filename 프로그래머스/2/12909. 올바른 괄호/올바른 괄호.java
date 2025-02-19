@@ -1,7 +1,6 @@
 import java.util.*;
 class Solution {
     boolean solution(String s) {
-        if(s.charAt(0) == '(' && s.charAt(s.length() -1) == ')'){
             int cnt = 0;
             String arr[] = s.split("");
             
@@ -15,9 +14,6 @@ class Solution {
                     return false;
                 }
             }
-           return cnt == 0;
-        }
-
-        return false;
+        return cnt == 0;
     }
 }
