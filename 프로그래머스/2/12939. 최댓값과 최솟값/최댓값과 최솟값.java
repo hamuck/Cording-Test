@@ -1,14 +1,19 @@
 import java.util.*;
 class Solution {
     public String solution(String s) {
-        int numbers[] = Arrays.stream(s.split(" "))
-                        .mapToInt(Integer::parseInt)
-                        .toArray();
-        
-        Arrays.sort(numbers);
-        StringBuilder answer = new StringBuilder("");
-        
-        answer.append(numbers[0]).append(" ").append(numbers[numbers.length - 1]);
-        return answer.toString();
+        String[] arrStr = s.split(" ");
+        int[] arrInt = new int[arrStr.length];
+        int i=0;
+        for(String part : arrStr){
+          arrInt[i] = Integer.parseInt(part);
+          i++;
+        }
+
+        StringBuffer sb = new StringBuffer();
+        sb.append(Arrays.stream(arrInt).min().getAsInt());
+        sb.append(" ");
+        sb.append(Arrays.stream(arrInt).max().getAsInt());
+
+        return sb.toString();
     }
 }
