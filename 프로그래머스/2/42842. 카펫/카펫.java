@@ -8,8 +8,8 @@ class Solution {
                 int height = total / width;
 
                 if ((width - 2) * (height - 2) == yellow) {
-                    answer[1] = width;
                     answer[0] = height;
+                    answer[1] = width;
                     break;
                 }
             }
