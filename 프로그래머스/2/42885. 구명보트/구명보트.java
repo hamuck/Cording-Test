@@ -12,11 +12,11 @@ class Solution {
         int answer = 0;
         
         while (!que.isEmpty()) {
-            int heaviest = que.pollLast();
-            if (!que.isEmpty() && heaviest + que.peekFirst() <= limit) {
+            int weight = que.pollLast();
+            if (!que.isEmpty() && weight + que.peekFirst() <= limit) {
                 que.pollFirst();
             }
-            answer++; // 보트 추가
+            answer++;
         }
         
         return answer;
