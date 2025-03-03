@@ -10,7 +10,6 @@ class Solution {
         for (int i = 1; i < words.length; i++) {
             int player = (i % n) + 1;
 
-
             if (usedWords.contains(words[i]) 
                 || beforeWord.charAt(beforeWord.length() - 1) != words[i].charAt(0)) {
                 int turn = (i / n) + 1;
